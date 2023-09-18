@@ -1,0 +1,29 @@
+const products = [
+    {name: "laptop", price:120000},
+    {name: "mobile", price:70000},
+    {name: "laptop bag", price:20000},
+    {name: "Watch", price:20000},
+    {name: "Mobile Charger", price:1500},
+];
+
+let maxProduct = {name:"", price:0}
+
+let minProduct = {name: "", price:Number.MAX_VALUE}
+
+
+for (let product of products){
+    if (product.price>maxProduct.price) {
+        maxProduct = product;
+    }
+    if(product.price< minProduct.price){
+        minProduct = product;
+    }
+}
+console.log(`The product with maximum ammount is ${maxProduct.name} witch is priced at Rs. ${maxProduct.price}`);
+console.log(`The product with minimum ammount is ${minProduct.name} witch is priced at Rs. ${minProduct.price}`);
+
+
+
+// output
+// The product with maximum ammount is laptop witch is priced at Rs. 120000
+// The product with minimum ammount is Mobile Charger witch is priced at Rs. 1500        
